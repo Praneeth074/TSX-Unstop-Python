@@ -1,0 +1,8 @@
+/* Task 2 - Styling heading and paragraph */
+h1 {
+    color: rgb(60, 6, 134);
+}
+
+p {
+    font-size: 18px;
+}
