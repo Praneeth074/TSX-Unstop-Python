@@ -1,4 +1,3 @@
-# Define rectangle dimensions
 length = 10
 width = 5
 # Calculate area and perimeter
