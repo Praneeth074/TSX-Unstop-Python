@@ -1,0 +1,462 @@
+/* Base Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #031328;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #020c1b;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Flash Messages */
+.flash-messages {
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffcc00;
+    color: #000;
+    animation: fadeIn 1s ease-in;
+}
+
+.flash {
+    padding: 0.75rem;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #141e30, #243b55);
+    animation: fadeIn 2s ease-in;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero .highlight {
+    background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+.projects-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.education-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Overview / Section Headings */
+section {
+    padding: 3rem 1rem;
+}
+
+h1,h2, h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff512f, #dd2476, #ff6a00, #f093fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For Firefox */
+    color: transparent;
+}
+
+
+/* Highlight Boxes */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.highlight-box {
+    background-color: #061730;
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1 1 30%;
+    min-width: 280px;
+    transition: transform 0.3s;
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    background-color: #112240;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #64ffda;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* About Page */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about-sidebar {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.about-sidebar img.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #64ffda;
+}
+
+.quick-facts {
+    list-style: none;
+    margin-top: 1rem;
+    color: #aaa;
+}
+
+.about-main {
+    flex: 3;
+}
+
+/* Education */
+.education-entry, .academic-project {
+    margin-bottom: 2rem;
+}
+
+.details-list, .certification-list {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    color: #ccc;
+}
+
+.section-divider {
+    border-top: 2px solid #333;
+    margin: 2rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #020c1b;
+    text-align: center;
+    padding: 1rem 0;
+    color: #ccc;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .highlights {
+        flex-direction: column;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+/* General section padding */
+section.contact-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+/* Section heading */
+.contact-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #a60737; /* You can use your preferred gradient here if needed */
+    font-weight: 700;
+}
+
+/* Section description paragraph */
+.contact-section p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Container flex wrapper for form and aside */
+.contact-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Contact form styling */
+.contact-form {
+    flex: 1 1 400px;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Form labels */
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Required field asterisk */
+.required {
+    color: #d0324a;
+}
+
+/* Form inputs and textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1.8px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #a60737;
+    outline: none;
+}
+
+/* Submit button */
+.btn-primary {
+    margin-top: 1rem;
+    padding: 0.75rem 1.6rem;
+    background-color: #a60737;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-primary:hover {
+    background-color: #d0324a;
+}
+
+/* Contact info aside */
+.contact-info {
+    flex: 0 0 280px;
+    background: #f3f3f3;
+    padding: 2rem 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    color: #333;
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #a60737;
+    font-weight: 700;
+}
+
+.contact-info h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #a60737;
+    margin-bottom: 0.7rem;
+}
+
+/* Contact info links */
+.contact-info p a {
+    color: #a60737;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: #d0324a;
+}
+
+/* Social links list */
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Social link icons */
+.social-links li a {
+    display: inline-block;
+}
+
+.icon-small {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 0.5px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.social-links li a:hover .icon-small {
+    transform: scale(1.15);
+}
+
+/* Responsive: stack form and info on smaller screens */
+@media (max-width: 720px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+        flex: unset;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+

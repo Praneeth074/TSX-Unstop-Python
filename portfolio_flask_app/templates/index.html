@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm <span class="highlight">Perla Venkata Sai Praneeth Reddy</span></h1>
+        <p class="tagline">Aspiring Software Developer | Python & Flask Enthusiast | Web Developer</p>
+        <a href="{{ url_for('contact') }}" class="btn-primary">Get in Touch</a>
+    </div>
+</section>
+
+<section class="overview">
+    <h2>Why This Portfolio?</h2>
+    <p>This portfolio showcases my journey as a developer, highlighting my education, certifications, and projects. Built with Python (Flask) and MongoDB, it demonstrates both my frontend and backend development skills.</p>
+</section>
+
+<section class="highlights">
+    <div class="highlight-box">
+        <h3>👨‍🎓 Education</h3>
+        <p>Explore my academic background, coursework, and achievements.</p>
+        <a href="{{ url_for('education') }}" class="btn-secondary">View Education</a>
+    </div>
+    <div class="highlight-box">
+        <h3>💻 Projects</h3>
+        <p>See the real-world projects and applications I’ve worked on.</p>
+        <a href="{{ url_for('projects') }}" class="btn-secondary">View Projects</a>
+    </div>
+    <div class="highlight-box">
+        <h3>📜 Certifications</h3>
+        <p>View my professional and technical certifications.</p>
+        <a href="{{ url_for('projects') }}" class="btn-secondary">Certifications</a>
+    </div>
+</section>
+
+<section class="skills">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+        <li>Python</li>
+        <li>Flask</li>
+        <li>MongoDB</li>
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>REST APIs</li>
+        <li>Bootstrap / Tailwind</li>
+    </ul>
+</section>
+
+<section class="call-to-action">
+    <h2>Let’s Build Something Great Together!</h2>
+    <p>If you're interested in collaborating or have any questions, don’t hesitate to reach out.</p>
+    <a href="{{ url_for('contact') }}" class="btn-primary">Contact Me</a>
+</section>
+{% endblock %}
